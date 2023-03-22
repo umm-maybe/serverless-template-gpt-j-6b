@@ -9,8 +9,8 @@ def init():
     global model
     global tokenizer
 
-    tokenizer = AutoTokenizer.from_pretrained("togethercomputer/GPT-JT-6B-v1")
-    model = AutoModelForCausalLM.from_pretrained("togethercomputer/GPT-JT-6B-v1", torch_dtype=torch.float16, low_cpu_mem_usage=True).to("cuda")
+    tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
+    model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B", torch_dtype=torch.float16, low_cpu_mem_usage=True).to("cuda")
 
 
 # Inference is ran for every server call
